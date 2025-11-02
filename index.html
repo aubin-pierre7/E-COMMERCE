@@ -1,101 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BookStore — Pack complet</title>
-  <link rel="icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookStore - Accueil</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a class="logo" href="#hero">
-        <img src="assets/logo.png" alt="BookStore" class="logo-img" />
-        <span class="logo-text">BookStore</span>
-      </a>
-      <nav class="nav">
-        <ul class="nav-menu">
-          <li><a href="#hero" class="nav-link">Accueil</a></li>
-          <li><a href="#pack" class="nav-link">Le Pack</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <header>
+    <nav>
+      <div class="logo">BookStore</div>
+      <div class="hamburger">&#9776;</div>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="index.html">Accueil</a></li>
+        <li><a class="nav-link" href="pack.html">Pack</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link" href="avis.html">Avis</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="hero" class="hero section">
-      <div class="container hero-grid fade-up-init">
-        <div class="hero-content">
-          <h1 class="hero-title">Transformez votre vie par la lecture</h1>
-          <p class="hero-sub">Découvrez le pack complet de nos livres en finance, développement personnel et entrepreneuriat.</p>
-          <a href="#pack" class="btn btn-primary btn-large">Découvrir le pack</a>
-        </div>
-        <div class="hero-media">
-          <img src="assets/hero.jpg" alt="Lecture inspirante" />
-        </div>
-      </div>
-    </section>
-
-    <!-- PACK -->
-    <section id="pack" class="section books-section fade-up-init">
-      <div class="container">
-        <h2 class="section-title">Pack Complet — 25 000 FCFA</h2>
-        <p class="section-sub">Tous les livres inclus dans un seul pack pour améliorer vos finances, votre développement personnel et votre esprit entrepreneurial.</p>
-
-        <!-- photos des livres -->
-        <div class="books-grid" id="packBooks">
-          <img src="assets/book-fr-1.jpg" alt="Livre 1" class="book-cover" />
-          <img src="assets/book-fr-2.jpg" alt="Livre 2" class="book-cover" />
-          <img src="assets/book-en-1.jpg" alt="Livre 3" class="book-cover" />
-          <img src="assets/book-en-2.jpg" alt="Livre 4" class="book-cover" />
-          <!-- ajoute d'autres couvertures si nécessaire -->
-        </div>
-
-        <!-- description détaillée -->
-        <div class="pack-description">
-          <h3>Contenu et bénéfices du pack</h3>
-          <ul>
-            <li>Apprenez les bases de la finance personnelle et comment gérer votre argent.</li>
-            <li>Développez vos compétences personnelles et boostez votre motivation.</li>
-            <li>Obtenez des stratégies entrepreneuriales pour lancer ou améliorer vos projets.</li>
-            <li>Accès instantané à tous les ebooks après paiement.</li>
-          </ul>
-        </div>
-
-        <div class="pack-cta">
-          <a href="https://wa.me/2376XXXXXXXX?text=Bonjour,%20je%20veux%20acheter%20le%20pack%20complet" class="btn btn-primary btn-large">Acheter le pack complet</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact-section fade-up-init">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>Pour toute question, écrivez-nous via WhatsApp ou email.</p>
-        <div class="contact-info">
-          <p>Email: contact@bookstore.cm</p>
-          <p>WhatsApp: +237 6XXXXXXXX</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer fade-up-init">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> BookStore — Tous droits réservés.</div>
-      <div class="footer-links">
-        <a href="#pack">Pack complet</a>
-        <a href="#contact">Contact</a>
-      </div>
+  <section class="hero fade-up-init">
+    <div class="hero-content">
+      <h1>Découvrez le pack complet de livres</h1>
+      <p>50 ebooks pour apprendre, progresser et transformer votre vie.</p>
+      <a href="pack.html" class="btn btn-primary">Voir le pack</a>
     </div>
+  </section>
+
+  <section class="about fade-up-init">
+    <h2>Pourquoi ce pack ?</h2>
+    <p>Ce pack rassemble les meilleurs eBooks pour booster vos compétences, enrichir vos connaissances et améliorer votre quotidien. Chaque livre a été sélectionné pour sa valeur éducative et pratique.</p>
+  </section>
+
+  <section class="mini-pack fade-up-init">
+    <h2>Aperçu du pack</h2>
+    <div class="mini-books">
+      <div class="mini-book"><img src="images/livre1.jpg" alt="Livre 1"><p>Livre 1</p></div>
+      <div class="mini-book"><img src="images/livre2.jpg" alt="Livre 2"><p>Livre 2</p></div>
+      <div class="mini-book"><img src="images/livre3.jpg" alt="Livre 3"><p>Livre 3</p></div>
+    </div>
+    <a href="pack.html" class="btn btn-primary">Voir le pack complet</a>
+  </section>
+
+  <section class="home-reviews fade-up-init">
+    <h2>+ de 50 personnes satisfaites</h2>
+    <p>Découvrez ce que nos utilisateurs pensent de nos ebooks.</p>
+    <a href="avis.html" class="btn btn-secondary">Lire tous les avis</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BookStore. Tous droits réservés.</p>
   </footer>
 
   <script src="script.js"></script>
