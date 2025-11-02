@@ -1,238 +1,103 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BookStore - Votre Librairie Numérique</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BookStore — Pack complet</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#hero" class="logo">
-                    <span class="logo-icon">📚</span>
-                    <span class="logo-text">BookStore</span>
-                </a>
-
-                <ul class="nav-menu">
-                    <li><a href="#hero" class="nav-link">Accueil</a></li>
-                    <li><a href="#francais" class="nav-link">Livres Français</a></li>
-                    <li><a href="#english" class="nav-link">English Books</a></li>
-                    <li><a href="#about" class="nav-link">À Propos</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-
-                <div class="nav-actions">
-                    <button class="cart-btn" id="cartBtn">
-                        <span class="cart-icon">🛒</span>
-                        <span class="cart-count" id="cartCount">0</span>
-                    </button>
-                    <button class="btn-primary" id="authBtn">Connexion</button>
-                </div>
-
-                <button class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Transformez Votre Vie avec la Lecture</h1>
-                <p class="hero-subtitle">Accédez à une bibliothèque de ressources en éducation financière, développement personnel et entrepreneuriat</p>
-                <div class="hero-buttons">
-                    <a href="#francais" class="btn-primary btn-large">Explorer le Catalogue</a>
-                    <a href="#about" class="btn-secondary btn-large">En Savoir Plus</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">100</span>
-                        <span class="stat-label">Ebooks</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">500</span>
-                        <span class="stat-label">Lecteurs</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">4.8</span>
-                        <span class="stat-label">Note Moyenne</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION LIVRES FRANÇAIS -->
-    <section id="francais" class="books-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Livres en Français</h2>
-                <p class="section-subtitle">Découvrez notre sélection de 70+ ebooks en français</p>
-                <div class="filter-tabs">
-                    <button class="filter-tab active" data-category="all" data-lang="fr">Tous</button>
-                    <button class="filter-tab" data-category="finance" data-lang="fr">Finance</button>
-                    <button class="filter-tab" data-category="dev_personnel" data-lang="fr">Développement Personnel</button>
-                    <button class="filter-tab" data-category="entrepreneuriat" data-lang="fr">Entrepreneuriat</button>
-                </div>
-            </div>
-
-            <div class="books-grid" id="booksFr">
-                <div class="loading">Chargement des livres...</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION LIVRES ANGLAIS -->
-    <section id="english" class="books-section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">English Books</h2>
-                <p class="section-subtitle">Explore our collection of 30+ English ebooks</p>
-                <div class="filter-tabs">
-                    <button class="filter-tab active" data-category="all" data-lang="en">All</button>
-                    <button class="filter-tab" data-category="finance" data-lang="en">Finance</button>
-                    <button class="filter-tab" data-category="dev_personnel" data-lang="en">Personal Development</button>
-                    <button class="filter-tab" data-category="entrepreneuriat" data-lang="en">Entrepreneurship</button>
-                </div>
-            </div>
-
-            <div class="books-grid" id="booksEn">
-                <div class="loading">Loading books...</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION À PROPOS -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Notre Mission</h2>
-                    <p>Dans un contexte où l'analphabétisme financier demeure élevé, beaucoup de personnes n'ont pas accès aux ressources pour gérer efficacement leur argent, investir ou se développer personnellement.</p>
-                    <p>Notre plateforme vise à fournir un accès simple, abordable et digital à des ressources fiables, vérifiées et adaptées au marché local africain.</p>
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">💡</div>
-                            <h3>Contenu Certifié</h3>
-                            <p>Des ressources vérifiées et de qualité</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">🎯</div>
-                            <h3>Adapté au Contexte</h3>
-                            <p>Des contenus pensés pour l'Afrique</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">📱</div>
-                            <h3>Accessible Partout</h3>
-                            <p>Lisez sur tous vos appareils</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION CONTACT -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contactez-Nous</h2>
-                <p class="section-subtitle">Une question ? N'hésitez pas à nous écrire</p>
-            </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-primary btn-large">Envoyer</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>BookStore</h3>
-                    <p>Votre plateforme d'éducation financière et de développement personnel</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#francais">Livres Français</a></li>
-                        <li><a href="#english">English Books</a></li>
-                        <li><a href="#about">À Propos</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Catégories</h4>
-                    <ul>
-                        <li><a href="#francais">Éducation Financière</a></li>
-                        <li><a href="#francais">Développement Personnel</a></li>
-                        <li><a href="#francais">Entrepreneuriat</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Email: contact@bookstore.cm</p>
-                    <p>Douala, Cameroun</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 BookStore. Tous droits réservés. IUT de Douala - Groupe 40</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- MODAL PANIER -->
-    <div class="modal" id="cartModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Mon Panier</h2>
-                <button class="modal-close" id="closeCart">&times;</button>
-            </div>
-            <div class="modal-body" id="cartItems">
-                <p class="empty-cart">Votre panier est vide</p>
-            </div>
-            <div class="modal-footer">
-                <div class="cart-total">
-                    <span>Total:</span>
-                    <span id="cartTotal">0 FCFA</span>
-                </div>
-                <button class="btn-primary btn-large" id="checkoutBtn">Commander</button>
-            </div>
-        </div>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#hero">
+        <img src="assets/logo.png" alt="BookStore" class="logo-img" />
+        <span class="logo-text">BookStore</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Accueil</a></li>
+          <li><a href="#pack" class="nav-link">Le Pack</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- MODAL LIVRE -->
-    <div class="modal" id="bookModal">
-        <div class="modal-content modal-large">
-            <button class="modal-close" id="closeBook">&times;</button>
-            <div class="modal-body" id="bookDetails">
-            </div>
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero section">
+      <div class="container hero-grid fade-up-init">
+        <div class="hero-content">
+          <h1 class="hero-title">Transformez votre vie par la lecture</h1>
+          <p class="hero-sub">Découvrez le pack complet de nos livres en finance, développement personnel et entrepreneuriat.</p>
+          <a href="#pack" class="btn btn-primary btn-large">Découvrir le pack</a>
         </div>
-    </div>
+        <div class="hero-media">
+          <img src="assets/hero.jpg" alt="Lecture inspirante" />
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="/script.js"></script>
+    <!-- PACK -->
+    <section id="pack" class="section books-section fade-up-init">
+      <div class="container">
+        <h2 class="section-title">Pack Complet — 25 000 FCFA</h2>
+        <p class="section-sub">Tous les livres inclus dans un seul pack pour améliorer vos finances, votre développement personnel et votre esprit entrepreneurial.</p>
+
+        <!-- photos des livres -->
+        <div class="books-grid" id="packBooks">
+          <img src="assets/book-fr-1.jpg" alt="Livre 1" class="book-cover" />
+          <img src="assets/book-fr-2.jpg" alt="Livre 2" class="book-cover" />
+          <img src="assets/book-en-1.jpg" alt="Livre 3" class="book-cover" />
+          <img src="assets/book-en-2.jpg" alt="Livre 4" class="book-cover" />
+          <!-- ajoute d'autres couvertures si nécessaire -->
+        </div>
+
+        <!-- description détaillée -->
+        <div class="pack-description">
+          <h3>Contenu et bénéfices du pack</h3>
+          <ul>
+            <li>Apprenez les bases de la finance personnelle et comment gérer votre argent.</li>
+            <li>Développez vos compétences personnelles et boostez votre motivation.</li>
+            <li>Obtenez des stratégies entrepreneuriales pour lancer ou améliorer vos projets.</li>
+            <li>Accès instantané à tous les ebooks après paiement.</li>
+          </ul>
+        </div>
+
+        <div class="pack-cta">
+          <a href="https://wa.me/2376XXXXXXXX?text=Bonjour,%20je%20veux%20acheter%20le%20pack%20complet" class="btn btn-primary btn-large">Acheter le pack complet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section fade-up-init">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p>Pour toute question, écrivez-nous via WhatsApp ou email.</p>
+        <div class="contact-info">
+          <p>Email: contact@bookstore.cm</p>
+          <p>WhatsApp: +237 6XXXXXXXX</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer fade-up-init">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BookStore — Tous droits réservés.</div>
+      <div class="footer-links">
+        <a href="#pack">Pack complet</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
