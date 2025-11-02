@@ -3,54 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BookStore - Accueil</title>
+  <title>Accueil - Pack Ebook</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <nav>
-      <div class="logo">BookStore</div>
-      <div class="hamburger">&#9776;</div>
-      <ul class="nav-menu">
-        <li><a class="nav-link" href="index.html">Accueil</a></li>
-        <li><a class="nav-link" href="pack.html">Pack</a></li>
-        <li><a class="nav-link" href="contact.html">Contact</a></li>
-        <li><a class="nav-link" href="avis.html">Avis</a></li>
-      </ul>
-    </nav>
+    <h1>Pack Ebook</h1>
+    <div class="hamburger">&#9776;</div>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Accueil</a></li>
+      <li><a href="pack.html" class="nav-link">Pack</a></li>
+      <li><a href="avis.html" class="nav-link">Avis</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
   </header>
 
-  <section class="hero fade-up-init">
-    <div class="hero-content">
-      <h1>Découvrez le pack complet de livres</h1>
-      <p>50 ebooks pour apprendre, progresser et transformer votre vie.</p>
-      <a href="pack.html" class="btn btn-primary">Voir le pack</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content fade-up-init">
+      <h1>Découvrez le pack ultime de 100 ebooks</h1>
+      <p><em>Apprenez, progressez et développez vos compétences avec notre sélection complète d’ebooks variés.</em></p>
+      <a href="pack.html" class="btn btn-primary">Voir le pack complet</a>
     </div>
   </section>
 
-  <section class="about fade-up-init">
-    <h2>Pourquoi ce pack ?</h2>
-    <p>Ce pack rassemble les meilleurs eBooks pour booster vos compétences, enrichir vos connaissances et améliorer votre quotidien. Chaque livre a été sélectionné pour sa valeur éducative et pratique.</p>
-  </section>
-
-  <section class="mini-pack fade-up-init">
-    <h2>Aperçu du pack</h2>
-    <div class="mini-books">
-      <div class="mini-book"><img src="images/livre1.jpg" alt="Livre 1"><p>Livre 1</p></div>
-      <div class="mini-book"><img src="images/livre2.jpg" alt="Livre 2"><p>Livre 2</p></div>
-      <div class="mini-book"><img src="images/livre3.jpg" alt="Livre 3"><p>Livre 3</p></div>
+  <!-- Mini Books Section -->
+  <section>
+    <h2 class="fade-up-init">Exemples de livres inclus dans le pack</h2>
+    <div class="mini-books fade-up-init">
+      <div class="mini-book">
+        <img src="assets/livre1.jpg" alt="Livre 1">
+        <div class="mini-book-title"><strong>Livre 1 :</strong> Développement personnel</div>
+      </div>
+      <div class="mini-book">
+        <img src="assets/livre2.jpg" alt="Livre 2">
+        <div class="mini-book-title"><strong>Livre 2 :</strong> Marketing Digital</div>
+      </div>
+      <div class="mini-book">
+        <img src="assets/livre3.jpg" alt="Livre 3">
+        <div class="mini-book-title"><strong>Livre 3 :</strong> Entrepreneuriat</div>
+      </div>
     </div>
-    <a href="pack.html" class="btn btn-primary">Voir le pack complet</a>
+    <a href="pack.html" class="btn btn-secondary fade-up-init">Voir le pack complet</a>
   </section>
 
-  <section class="home-reviews fade-up-init">
-    <h2>+ de 50 personnes satisfaites</h2>
-    <p>Découvrez ce que nos utilisateurs pensent de nos ebooks.</p>
-    <a href="avis.html" class="btn btn-secondary">Lire tous les avis</a>
+  <!-- About Pack -->
+  <section>
+    <h2 class="fade-up-init">Pourquoi ce pack peut changer votre vie</h2>
+    <p class="fade-up-init"><em>Ce pack contient 100 ebooks soigneusement sélectionnés pour améliorer vos compétences, booster votre carrière et vous inspirer chaque jour.</em></p>
+    <p class="fade-up-init"><strong>NB :</strong> Les 20 livres présentés ici ne sont qu’un aperçu de la richesse que vous allez découvrir.</p>
+    <p class="fade-up-init">+ de 50 personnes satisfaites ont déjà investi dans ce pack et voient des résultats concrets dans leur vie quotidienne.</p>
+    <a href="avis.html" class="btn btn-primary fade-up-init">Voir les avis de nos utilisateurs</a>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 BookStore. Tous droits réservés.</p>
+    &copy; 2025 Pack Ebook. Tous droits réservés.
   </footer>
 
   <script src="script.js"></script>
