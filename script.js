@@ -9,7 +9,9 @@ if (menuBurger) {
   menuBurger.addEventListener('click', () => menuNav.classList.toggle('active'));
 }
 
-// Texte bilingue pour toutes les pages
+// =====================
+// Textes bilingues (FR/EN)
+// =====================
 const textes = {
   index: {
     fr: {
@@ -59,36 +61,12 @@ const textes = {
     fr: {
       avisTitre: "Les avis de nos clients satisfaits",
       avisDesc: "Découvrez ce que nos utilisateurs pensent du pack AubinPack. Leur réussite est notre plus grande fierté.",
-      btnDonnerAvis: "Donner mon avis",
-      avisListe: [
-        { auteur: "Alice", texte: "Super pack, j'ai beaucoup appris !" },
-        { auteur: "Bob", texte: "Livres variés et instructifs." },
-        { auteur: "Chloé", texte: "Contenu de qualité, je recommande." },
-        { auteur: "David", texte: "Excellent investissement pour seulement 3000 FCFA." },
-        { auteur: "Emma", texte: "Très satisfait, pack complet et utile." },
-        { auteur: "Fabrice", texte: "Des livres pratiques pour mon business." },
-        { auteur: "Gisèle", texte: "Idéal pour améliorer mes compétences en marketing." },
-        { auteur: "Hugo", texte: "Je recommande ce pack à tous mes amis." },
-        { auteur: "Isabelle", texte: "Pack bien structuré et riche en contenu." },
-        { auteur: "Jean", texte: "Livres très inspirants et faciles à lire." }
-      ]
+      btnDonnerAvis: "Donner mon avis"
     },
     en: {
       avisTitre: "Reviews from our satisfied customers",
       avisDesc: "Discover what our users think about the AubinPack. Their success is our greatest pride.",
-      btnDonnerAvis: "Give my review",
-      avisListe: [
-        { auteur: "Alice", texte: "Great pack, I learned a lot!" },
-        { auteur: "Bob", texte: "Varied and informative books." },
-        { auteur: "Chloé", texte: "High-quality content, I recommend it." },
-        { auteur: "David", texte: "Excellent investment for only 3,000 FCFA." },
-        { auteur: "Emma", texte: "Very satisfied, complete and useful pack." },
-        { auteur: "Fabrice", texte: "Practical books for my business." },
-        { auteur: "Gisèle", texte: "Perfect to improve my marketing skills." },
-        { auteur: "Hugo", texte: "I recommend this pack to all my friends." },
-        { auteur: "Isabelle", texte: "Well-structured pack rich in content." },
-        { auteur: "Jean", texte: "Very inspiring and easy-to-read books." }
-      ]
+      btnDonnerAvis: "Give my review"
     }
   },
   contact: {
@@ -106,7 +84,7 @@ const textes = {
 };
 
 // =====================
-// Changement de langue
+// Gestion de la langue
 // =====================
 let langueActuelle = 'fr';
 const boutonLangue = document.getElementById('changerLangue');
@@ -157,18 +135,6 @@ function mettreAJourTexte() {
     document.querySelector('.avis h1').textContent = t.avisTitre;
     document.querySelector('.avis p em').textContent = t.avisDesc;
     document.querySelector('.btn-secondaire').textContent = t.btnDonnerAvis;
-    const listeAvis = document.getElementById('listeAvis');
-    if (listeAvis) {
-      listeAvis.innerHTML = '';
-      t.avisListe.forEach(a => {
-        const carte = document.createElement('div');
-        carte.className = 'carte-avis effet-apparition-init';
-        carte.innerHTML = `<p>"${a.texte}"</p><p class="auteur">- ${a.auteur}</p>`;
-        listeAvis.appendChild(carte);
-      });
-      const elementsApparition = document.querySelectorAll('.effet-apparition-init');
-      elementsApparition.forEach(el => observateur.observe(el));
-    }
   }
 
   if (page === 'contact') {
@@ -181,35 +147,76 @@ function mettreAJourTexte() {
 }
 
 // =====================
-// Section livres mini
+// Mini-livres (3 images accueil)
 // =====================
 const conteneurLivresMini = document.querySelector('.livres-mini');
 if (conteneurLivresMini) {
-  for (let i = 1; i <= 3; i++) {
+  const livresMini = [
+    {
+      src: "assets/Livres/Les Secrets d'un Esprit Millionaire.jpg",
+      fr: "Développement personnel",
+      en: "Personal development"
+    },
+    {
+      src: "assets/Livres/70-Questions-Pour-Enfin-Se-Demarquer.jpg",
+      fr: "Marketing Digital",
+      en: "Digital Marketing"
+    },
+    {
+      src: "assets/Livres/Les-hommes-viennent-de-Mars-les-femmes-viennent-de-Venus.jpg",
+      fr: "Relations & communication",
+      en: "Relationships & communication"
+    }
+  ];
+
+  livresMini.forEach((livre, i) => {
     const livreMini = document.createElement('div');
     livreMini.className = 'livre-mini effet-apparition-init';
     livreMini.innerHTML = `
-      <img src="assets/Livres_3${i}.jpg" alt="Livre ${i}">
-      <div class="titre-livre-mini"><strong>Livre ${i}</strong></div>
+      <img src="${livre.src}" alt="Livre ${i + 1}">
+      <div class="titre-livre-mini"><strong>Livre ${i + 1} :</strong> ${livre[langueActuelle]}</div>
     `;
     conteneurLivresMini.appendChild(livreMini);
-  }
+  });
 }
 
 // =====================
-// Section pack de livres (20 livres FR/EN)
+// Section Pack (20 images complètes)
 // =====================
 const sectionLivresPack = document.getElementById('livresPack');
 if (sectionLivresPack) {
-  for (let i = 1; i <= 20; i++) {
+  const livresPack = [
+    "Les Secrets d'un Esprit Millionaire",
+    "70-Questions-Pour-Enfin-Se-Demarquer",
+    "Les-hommes-viennent-de-Mars-les-femmes-viennent-de-Venus",
+    "Tout le monde merite d'etre riche _ Ou tout ce que vous n'avez jamais appris a l'ecole a propos de votre argent",
+    "The Book of Mistakes_ 9 Secrets to Creating a Successful Future",
+    "The 4 Disciplines of Execution",
+    "Shoe Dog",
+    "ScientificAdvertising",
+    "Père riche Père pauvre",
+    "L'homme le plus riche de Babylone",
+    "Les liaisons dangereuses",
+    "L'Art de la Séduction pour les Adolescents",
+    "La Loi de l'attraction - Les clés du secret pour obtenir ce que vous désirez",
+    "Comment-développer-lautodiscipline",
+    "Comment devenir un mâle dominant",
+    "Ce que les femmes attendent des hommes _ (mais ne leur diront jamais)",
+    "Augmenter votre intelligence financiere",
+    "Anthony Robbins THE POWER TO INFLUENCE",
+    "The Secret Code of Seduction",
+    "50 exercices pour développer son influence"
+  ];
+
+  livresPack.forEach((titre, i) => {
     const carteLivre = document.createElement('div');
     carteLivre.className = 'carte-livre-pack effet-apparition-init';
     carteLivre.innerHTML = `
-      <img src="assets/Livres${i}.jpg" alt="Livres ${i}">
-      <div class="titre-livre-pack"><strong>Book ${i}</strong></div>
+      <img src="assets/Livres/${titre}.jpg" alt="${titre}">
+      <div class="titre-livre-pack"><strong>${i + 1}.</strong> ${titre}</div>
     `;
     sectionLivresPack.appendChild(carteLivre);
-  }
+  });
 }
 
 // =====================
@@ -244,6 +251,41 @@ liensMenu.forEach(lien => {
 });
 
 // =====================
-// Initialiser texte
+// Initialisation
 // =====================
 mettreAJourTexte();
+
+
+// =====================
+// Avis dynamiques (10 FR + 10 EN)
+// =====================
+const conteneurAvis = document.querySelector('#listeAvis');
+if (conteneurAvis) {
+  const avis = {
+    fr: [
+      "Pack incroyable, les ebooks sont très bien choisis !",
+      "J’ai appris énormément sur la gestion financière.",
+      "Les livres sur le leadership sont super inspirants.",
+      "Une vraie mine d’or pour qui veut progresser.",
+      "Service rapide et pack complet. Bravo !",
+      "Je recommande à 100%. Très enrichissant.",
+      "Des livres utiles et faciles à lire.",
+      "Ce pack a changé ma manière de penser.",
+      "Très bon rapport qualité-prix.",
+      "Simplement parfait ! Merci AubinPack."
+    ],
+    en: [
+      "Amazing pack, the ebooks are perfectly chosen!",
+      "I learned a lot about financial management.",
+      "The leadership books are very inspiring.",
+      "A real goldmine for those who want to grow.",
+      "Fast service and complete pack. Well done!",
+      "Highly recommended. Very valuable.",
+      "Useful and easy-to-read books.",
+      "This pack changed my mindset completely.",
+      "Excellent value for money.",
+      "Simply perfect! Thanks AubinPack."
+    ]
+  };
+
+}
