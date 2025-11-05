@@ -299,24 +299,54 @@ footer p {
 }
 
 /* =====================
+   Espace photo accueil
+===================== */
+.photo-accueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-accueil:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* =====================
    Photo d'accueil (balise <img>)
 ===================== */
 .photo-accueil img {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  display: block;
-  margin: 20px auto;
+  border: 4px solid #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  border: 3px solid #fff;
+  transition: transform 0.3s ease;
 }
 
-/* Version responsive */
+.photo-accueil img:hover {
+  transform: scale(1.03);
+}
+
+/* =====================
+   Version responsive
+===================== */
 @media(max-width:480px) {
+  .photo-accueil {
+    width: 150px;
+    height: 150px;
+  }
+
   .photo-accueil img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
   }
 }
-
