@@ -230,3 +230,27 @@ footer {
   .contenu-banniere h1 { font-size: 2rem; }
   .contenu-banniere p { font-size: 1rem; }
 }
+
+
+.lien-nav.actif {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+
+footer p {
+  padding: 0 10px;
+}
+
+
+.lien-social:focus img {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+

@@ -3,36 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AubinPack - Avis clients</title>
+  <title>Avis clients - AubinPack</title>
+  <meta name="description" content="Découvrez les avis authentiques des utilisateurs du pack AubinPack. Des lecteurs satisfaits qui ont transformé leur vie grâce à nos 100 ebooks.">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <!-- En-tête -->
   <header>
-    <h1>AubinPack</h1>
-    <div class="menu-burger">&#9776;</div>
-    <ul class="menu-nav">
-      <li><a class="lien-nav" href="index.html">Accueil</a></li>
-      <li><a class="lien-nav" href="pack.html">Pack</a></li>
-      <li><a class="lien-nav" href="avis.html">Avis</a></li>
-      <li><a class="lien-nav" href="contact.html">Contact</a></li>
-    </ul>
+    <h1 class="logo">AubinPack</h1>
+    <button class="menu-burger" aria-label="Ouvrir le menu">&#9776;</button>
+    <nav>
+      <ul class="menu-nav">
+        <li><a href="index.html" class="lien-nav">Accueil</a></li>
+        <li><a href="pack.html" class="lien-nav">Pack</a></li>
+        <li><a href="avis.html" class="lien-nav actif">Avis</a></li>
+        <li><a href="contact.html" class="lien-nav">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Section des avis -->
   <section class="avis effet-apparition-init">
-    <h1>Avis de nos clients</h1>
+    <h1>Les avis de nos clients satisfaits</h1>
+    <p><em>Découvrez ce que nos utilisateurs pensent du pack AubinPack. Leur réussite est notre plus grande fierté.</em></p>
+
     <div class="liste-avis" id="listeAvis">
-      <!-- Avis injectés par script.js -->
+      <!-- Les avis sont injectés dynamiquement via script.js -->
     </div>
+
+    <a href="mailto:aubinpack@gmail.com?subject=Mon%20avis%20sur%20AubinPack" class="btn btn-secondaire effet-apparition-init">Donner mon avis</a>
   </section>
 
   <!-- Pied de page -->
   <footer>
-    <p>&copy; 2025 AubinPack | Par Aubin2025 - Code avec passion et détermination. Tous droits réservés.</p>
+    <p>&copy; 2025 <strong>AubinPack</strong> | Par Aubin2025 — Code avec passion et détermination. Tous droits réservés.</p>
     <div class="liens-sociaux">
-      <a href="https://wa.me/+237696865577" target="_blank" class="lien-social"><img src="assets/WhatsApp.jpg" alt="WhatsApp" /></a>
-      <a href="mailto:aubinpack@gmail.com" target="_blank" class="lien-social"><img src="assets/gmail.png" alt="Gmail" /></a>
+      <a href="https://wa.me/+237696865577" target="_blank" class="lien-social" aria-label="WhatsApp">
+        <img src="assets/WhatsApp.jpg" alt="Logo WhatsApp" />
+      </a>
+      <a href="mailto:aubinpack@gmail.com" target="_blank" class="lien-social" aria-label="Gmail">
+        <img src="assets/gmail.png" alt="Logo Gmail" />
+      </a>
     </div>
   </footer>
 

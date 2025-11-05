@@ -3,28 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AubinPack - Contact</title>
+  <title>Contact - AubinPack</title>
+  <meta name="description" content="Contactez AubinPack pour toute question sur le pack de 100 ebooks, les avis clients ou les informations d’achat.">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <!-- En-tête -->
   <header>
-    <h1>AubinPack</h1>
-    <div class="menu-burger">&#9776;</div>
-    <ul class="menu-nav">
-      <li><a class="lien-nav" href="index.html">Accueil</a></li>
-      <li><a class="lien-nav" href="pack.html">Pack</a></li>
-      <li><a class="lien-nav" href="avis.html">Avis</a></li>
-      <li><a class="lien-nav" href="contact.html">Contact</a></li>
-    </ul>
+    <h1 class="logo">AubinPack</h1>
+    <button class="menu-burger" aria-label="Ouvrir le menu">&#9776;</button>
+    <nav>
+      <ul class="menu-nav">
+        <li><a href="index.html" class="lien-nav">Accueil</a></li>
+        <li><a href="pack.html" class="lien-nav">Pack</a></li>
+        <li><a href="avis.html" class="lien-nav">Avis</a></li>
+        <li><a href="contact.html" class="lien-nav actif">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Section contact -->
   <section class="contact effet-apparition-init">
     <h1>Contactez-nous</h1>
-    <p>Pour toute question ou demande d’information, envoyez-nous un email ou contactez-nous sur WhatsApp.</p>
-    <p><strong>Email :</strong> aubinpack@gmail.com</p>
-    <p><strong>WhatsApp :</strong> +237 696865577</p>
+    <p>Pour toute question ou demande d’information, envoyez-nous un email ou contactez-nous directement sur WhatsApp.</p>
+
+    <div class="infos-contact">
+      <p><strong>Email :</strong> <a href="mailto:aubinpack@gmail.com">aubinpack@gmail.com</a></p>
+      <p><strong>WhatsApp :</strong> <a href="https://wa.me/+237696865577" target="_blank">+237 696865577</a></p>
+    </div>
 
     <!-- Formulaire de contact -->
     <form class="formulaire-contact" action="mailto:aubinpack@gmail.com" method="post" enctype="text/plain">
@@ -43,10 +50,14 @@
 
   <!-- Pied de page -->
   <footer>
-    <p>&copy; 2025 AubinPack | Par Aubin2025 - Code avec passion et détermination. Tous droits réservés.</p>
+    <p>&copy; 2025 <strong>AubinPack</strong> | Par Aubin2025 — Code avec passion et détermination. Tous droits réservés.</p>
     <div class="liens-sociaux">
-      <a href="https://wa.me/+237696865577" target="_blank" class="lien-social"><img src="assets/WhatsApp.jpg" alt="WhatsApp" /></a>
-      <a href="mailto:aubinpack@gmail.com" target="_blank" class="lien-social"><img src="assets/gmail.png" alt="Gmail" /></a>
+      <a href="https://wa.me/+237696865577" target="_blank" class="lien-social" aria-label="WhatsApp">
+        <img src="assets/WhatsApp.jpg" alt="Logo WhatsApp" />
+      </a>
+      <a href="mailto:aubinpack@gmail.com" target="_blank" class="lien-social" aria-label="Gmail">
+        <img src="assets/gmail.png" alt="Logo Gmail" />
+      </a>
     </div>
   </footer>
 

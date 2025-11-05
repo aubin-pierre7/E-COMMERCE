@@ -69,3 +69,18 @@ const observateur = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 elementsApparition.forEach(el => observateur.observe(el));
+
+
+document.querySelectorAll('.menu-nav a').forEach(lien => {
+  lien.addEventListener('click', () => {
+    menuNav.classList.remove('active');
+  });
+});
+
+
+const liensMenu = document.querySelectorAll('.menu-nav a');
+liensMenu.forEach(lien => {
+  if (lien.href === window.location.href) {
+    lien.classList.add('actif');
+  }
+});
