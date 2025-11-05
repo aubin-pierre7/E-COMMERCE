@@ -282,3 +282,18 @@ footer p {
     margin: 10px 0;
   }
 }
+
+
+/* =====================
+   Espace photo accueil
+===================== */
+.photo-accueil {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background-color: #ddd; /* couleur placeholder */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
