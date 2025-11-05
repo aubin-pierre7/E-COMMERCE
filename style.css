@@ -254,3 +254,31 @@ footer p {
 }
 
 
+/* =====================
+   Bouton de langue
+===================== */
+.bouton-langue {
+  margin-left: 20px;
+}
+
+.btn-langue {
+  padding: 5px 12px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-langue:hover {
+  background: var(--secondary-color);
+}
+
+/* Responsive pour le bouton langue dans la navbar */
+@media(max-width:768px) {
+  .bouton-langue {
+    margin: 10px 0;
+  }
+}

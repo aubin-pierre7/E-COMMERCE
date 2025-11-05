@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - AubinPack</title>
+  <meta name="description" content="Contact AubinPack for any questions about the 100 ebooks pack, customer reviews, or purchase information.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1 class="logo">AubinPack</h1>
+    <button class="menu-burger" aria-label="Open menu">&#9776;</button>
+    <nav>
+      <ul class="menu-nav">
+        <li><a href="index_en.html" class="lien-nav">Home</a></li>
+        <li><a href="pack_en.html" class="lien-nav">Pack</a></li>
+        <li><a href="avis_en.html" class="lien-nav">Reviews</a></li>
+        <li><a href="contact_en.html" class="lien-nav actif">Contact</a></li>
+      </ul>
+      <!-- Language button -->
+      <div class="bouton-langue">
+        <a href="contact.html" class="btn-langue">FR</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact effet-apparition-init">
+    <h1>Contact Us</h1>
+    <p>For any question or information request, send us an email or contact us directly on WhatsApp.</p>
+
+    <div class="infos-contact">
+      <p><strong>Email:</strong> <a href="mailto:aubinpack@gmail.com">aubinpack@gmail.com</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/+237696865577" target="_blank">+237 696865577</a></p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="formulaire-contact" action="mailto:aubinpack@gmail.com" method="post" enctype="text/plain">
+      <label for="nom">Full Name</label>
+      <input type="text" id="nom" name="nom" placeholder="Your full name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+
+      <button type="submit" class="btn btn-principal">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 <strong>AubinPack</strong> | By Aubin2025 — Code with passion and determination. All rights reserved.</p>
+    <div class="liens-sociaux">
+      <a href="https://wa.me/+237696865577" target="_blank" class="lien-social" aria-label="WhatsApp">
+        <img src="assets/WhatsApp.jpg" alt="WhatsApp logo" />
+      </a>
+      <a href="mailto:aubinpack@gmail.com" target="_blank" class="lien-social" aria-label="Gmail">
+        <img src="assets/gmail.png" alt="Gmail logo" />
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
