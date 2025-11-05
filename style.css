@@ -41,19 +41,21 @@ a { text-decoration: none; color: inherit; }
   font-weight: bold;
   text-align: center;
 }
-.btn-primary {
+
+.btn-principal {
   background: var(--primary-color);
   color: #fff;
 }
-.btn-primary:hover { background: var(--secondary-color); }
-.btn-secondary {
+.btn-principal:hover { background: var(--secondary-color); }
+
+.btn-secondaire {
   background: #ccc;
   color: #333;
 }
-.btn-secondary:hover { background: var(--primary-color); color: #fff; }
+.btn-secondaire:hover { background: var(--primary-color); color: #fff; }
 
 /* =====================
-   Header
+   En-tête
 ===================== */
 header {
   background: var(--header-bg);
@@ -66,33 +68,41 @@ header {
   top: 0;
   z-index: 100;
 }
-.nav-menu {
+
+.menu-nav {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-.nav-menu li { display: inline; }
-.nav-link { font-weight: bold; transition: 0.3s; }
-.nav-link:hover { color: var(--primary-color); }
-.hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
+.menu-nav li { display: inline; }
+.lien-nav { font-weight: bold; transition: 0.3s; }
+.lien-nav:hover { color: var(--primary-color); }
+
+.menu-burger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
 /* =====================
-   Hero
+   Bannière principale
 ===================== */
-.hero {
+.banniere {
   text-align: center;
   padding: 80px 20px;
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: #fff;
 }
-.hero-content h1 { font-size: 2.5rem; margin-bottom: 20px; }
-.hero-content p { font-size: 1.2rem; margin-bottom: 30px; }
+
+.contenu-banniere h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.contenu-banniere p { font-size: 1.2rem; margin-bottom: 30px; }
 
 /* =====================
-   Sections
+   Sections générales
 ===================== */
 section { padding: 60px 20px; text-align: center; }
-.mini-books, .pack-books, .reviews-list {
+
+.livres-mini, .livres-pack, .liste-avis {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -102,7 +112,7 @@ section { padding: 60px 20px; text-align: center; }
 /* =====================
    Cartes livres et avis
 ===================== */
-.mini-book, .pack-book-card, .review-card {
+.livre-mini, .carte-livre-pack, .carte-avis {
   background: #fff;
   padding: 10px;
   border-radius: 10px;
@@ -116,43 +126,46 @@ section { padding: 60px 20px; text-align: center; }
   align-items: center;
 }
 
-.mini-book img, .pack-book-card img {
+.livre-mini img, .carte-livre-pack img {
   width: 100%;
-  height: 250px; /* hauteur uniforme */
-  object-fit: cover; /* garde proportions, rempli le bloc */
+  height: 250px;
+  object-fit: cover;
   border-radius: 5px;
 }
 
-.mini-book-title, .pack-book-title {
+.titre-livre-mini, .titre-livre-pack {
   margin-top: 10px;
   font-weight: bold;
   text-align: center;
 }
 
 /* Avis */
-.review-card p { margin: 5px 0; }
-.review-card .author { font-style: italic; color: var(--primary-color); }
+.carte-avis p { margin: 5px 0; }
+.carte-avis .auteur { font-style: italic; color: var(--primary-color); }
 
 /* =====================
-   Animations Fade-up
+   Animation d’apparition
 ===================== */
-.fade-up-init {
+.effet-apparition-init {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease-out;
 }
-.fade-up-init.visible { opacity: 1; transform: translateY(0); }
+.effet-apparition-init.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* =====================
-   Hover Effects
+   Effets au survol
 ===================== */
-.mini-book:hover, .pack-book-card:hover, .review-card:hover {
+.livre-mini:hover, .carte-livre-pack:hover, .carte-avis:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 /* =====================
-   Footer
+   Pied de page
 ===================== */
 footer {
   text-align: center;
@@ -161,36 +174,59 @@ footer {
   color: var(--footer-color);
 }
 
+.liens-sociaux {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.lien-social img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.lien-social:hover img { transform: scale(1.1); }
+
 /* =====================
-   Formulaire Contact
+   Formulaire de contact
 ===================== */
-.contact-form {
+.formulaire-contact {
   max-width: 500px;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.contact-form label { font-weight: bold; margin-bottom: 5px; }
-.contact-form input, .contact-form textarea {
+.formulaire-contact label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.formulaire-contact input,
+.formulaire-contact textarea {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 100%;
 }
-.contact-form button { width: 100%; }
+.formulaire-contact button { width: 100%; }
 
 /* =====================
    Responsive
 ===================== */
 @media(max-width:768px) {
-  .nav-menu { flex-direction: column; display: none; }
-  .nav-menu.active { display: flex; }
-  .hamburger { display: block; }
-  .mini-book, .pack-book-card { width: 45%; }
+  .menu-nav {
+    flex-direction: column;
+    display: none;
+  }
+  .menu-nav.active { display: flex; }
+  .menu-burger { display: block; }
+
+  .livre-mini, .carte-livre-pack { width: 45%; }
 }
+
 @media(max-width:480px) {
-  .mini-book, .pack-book-card { width: 100%; }
-  .hero-content h1 { font-size: 2rem; }
-  .hero-content p { font-size: 1rem; }
+  .livre-mini, .carte-livre-pack { width: 100%; }
+  .contenu-banniere h1 { font-size: 2rem; }
+  .contenu-banniere p { font-size: 1rem; }
 }

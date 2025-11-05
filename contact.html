@@ -7,45 +7,47 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- En-tête -->
   <header>
     <h1>AubinPack</h1>
-    <div class="hamburger">&#9776;</div>
-    <ul class="nav-menu">
-      <li><a class="nav-link" href="index.html">Accueil</a></li>
-      <li><a class="nav-link" href="pack.html">Pack</a></li>
-      <li><a class="nav-link" href="avis.html">Avis</a></li>
-      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    <div class="menu-burger">&#9776;</div>
+    <ul class="menu-nav">
+      <li><a class="lien-nav" href="index.html">Accueil</a></li>
+      <li><a class="lien-nav" href="pack.html">Pack</a></li>
+      <li><a class="lien-nav" href="avis.html">Avis</a></li>
+      <li><a class="lien-nav" href="contact.html">Contact</a></li>
     </ul>
   </header>
 
-  <section class="contact fade-up-init">
-  <h1>Contactez-nous</h1>
-  <p>Pour toute question ou demande d’information, envoyez-nous un email ou contactez-nous sur WhatsApp.</p>
-  <p><strong>Email:</strong> aubinpack@gmail.com</p>
-  <p><strong>WhatsApp:</strong> +237 696865577</p>
+  <!-- Section contact -->
+  <section class="contact effet-apparition-init">
+    <h1>Contactez-nous</h1>
+    <p>Pour toute question ou demande d’information, envoyez-nous un email ou contactez-nous sur WhatsApp.</p>
+    <p><strong>Email :</strong> aubinpack@gmail.com</p>
+    <p><strong>WhatsApp :</strong> +237 696865577</p>
 
-  <!-- Formulaire Contact -->
-  <form class="contact-form" action="mailto:aubinpack@gmail.com" method="post" enctype="text/plain">
-    <label for="nom">Nom complet</label>
-    <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
+    <!-- Formulaire de contact -->
+    <form class="formulaire-contact" action="mailto:aubinpack@gmail.com" method="post" enctype="text/plain">
+      <label for="nom">Nom complet</label>
+      <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Votre email" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Votre email" required>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Laissez votre message ici" rows="5" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Laissez votre message ici" rows="5" required></textarea>
 
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-  </form>
-</section>
+      <button type="submit" class="btn btn-principal">Envoyer</button>
+    </form>
+  </section>
 
-
+  <!-- Pied de page -->
   <footer>
-    <p>&copy; 2025 AubinPack | Par Aubin2025 - Code avec passion et determination. Tous droits réservés.</p>
-        <div class="social-links">
-        <a href="https://wa.me/+237696865577" target="_blank" class="social-link"><img src="assets/WhatsApp.jpg" alt="GitHub" /></a>
-        <a href="mailto:aubinpack@gmail.com" target="_blank" class="social-link"><img src="assets/gmail.png" alt="Twitter" /></a>
-      </div>
+    <p>&copy; 2025 AubinPack | Par Aubin2025 - Code avec passion et détermination. Tous droits réservés.</p>
+    <div class="liens-sociaux">
+      <a href="https://wa.me/+237696865577" target="_blank" class="lien-social"><img src="assets/WhatsApp.jpg" alt="WhatsApp" /></a>
+      <a href="mailto:aubinpack@gmail.com" target="_blank" class="lien-social"><img src="assets/gmail.png" alt="Gmail" /></a>
+    </div>
   </footer>
 
   <script src="script.js"></script>
