@@ -297,3 +297,26 @@ footer p {
   background-position: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* =====================
+   Photo d'accueil (balise <img>)
+===================== */
+.photo-accueil img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border: 3px solid #fff;
+}
+
+/* Version responsive */
+@media(max-width:480px) {
+  .photo-accueil img {
+    width: 130px;
+    height: 130px;
+  }
+}
+

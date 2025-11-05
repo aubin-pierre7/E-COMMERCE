@@ -94,13 +94,13 @@ const textes = {
   contact: {
     fr: {
       contactTitre: "Contactez-moi",
-      contactDesc: "Pour toute question ou demande d’information, envoyez-moi un email ou contactez-moi directement sur WhatsApp.",
-      btnEnvoyer: "Envoyer"
+      contactDesc: "Pour toute question ou demande d’information, contactez-moi directement sur WhatsApp. Tous les messages sont envoyés via WhatsApp.",
+      btnEnvoyer: "Contacter sur WhatsApp"
     },
     en: {
       contactTitre: "Contact us",
-      contactDesc: "For any questions or information requests, send us an email or contact us directly on WhatsApp.",
-      btnEnvoyer: "Send"
+      contactDesc: "For any question or information request, contact us directly on WhatsApp. All messages are sent via WhatsApp.",
+      btnEnvoyer: "Contact via WhatsApp"
     }
   }
 };
@@ -120,11 +120,10 @@ if (boutonLangue) {
 }
 
 function mettreAJourTexte() {
-  const page = window.location.pathname.split('/').pop().split('.')[0]; // nom de page
+  const page = window.location.pathname.split('/').pop().split('.')[0];
   if (!textes[page]) return;
   const t = textes[page][langueActuelle];
 
-  // Page accueil
   if (page === 'index') {
     document.querySelector('.contenu-banniere h1').textContent = t.banniereTitre;
     document.querySelector('.contenu-banniere p em').textContent = t.banniereDesc;
@@ -142,27 +141,24 @@ function mettreAJourTexte() {
     }
   }
 
-  // Page Pack
   if (page === 'pack') {
     document.querySelector('.contenu-banniere h1').textContent = t.banniereTitre;
     document.querySelector('.contenu-banniere p em').textContent = t.banniereDesc;
     document.querySelector('.btn-principal').textContent = t.btnVoirPack;
     document.querySelector('section h2').textContent = t.packApercuTitre;
     const ps = document.querySelectorAll('section p');
-    if(ps[0]) ps[0].textContent = t.packDesc;
-    if(ps[1]) ps[1].textContent = t.packDesc2;
+    if (ps[0]) ps[0].textContent = t.packDesc;
+    if (ps[1]) ps[1].textContent = t.packDesc2;
     const btnAcheter = document.querySelector('.btn-principal');
-    if(btnAcheter) btnAcheter.textContent = t.btnAcheter;
+    if (btnAcheter) btnAcheter.textContent = t.btnAcheter;
   }
 
-  // Page Avis
   if (page === 'avis') {
     document.querySelector('.avis h1').textContent = t.avisTitre;
     document.querySelector('.avis p em').textContent = t.avisDesc;
     document.querySelector('.btn-secondaire').textContent = t.btnDonnerAvis;
-    // Mettre à jour les avis
     const listeAvis = document.getElementById('listeAvis');
-    if(listeAvis) {
+    if (listeAvis) {
       listeAvis.innerHTML = '';
       t.avisListe.forEach(a => {
         const carte = document.createElement('div');
@@ -170,24 +166,22 @@ function mettreAJourTexte() {
         carte.innerHTML = `<p>"${a.texte}"</p><p class="auteur">- ${a.auteur}</p>`;
         listeAvis.appendChild(carte);
       });
-      // ré-observer les animations
       const elementsApparition = document.querySelectorAll('.effet-apparition-init');
       elementsApparition.forEach(el => observateur.observe(el));
     }
   }
 
-  // Page Contact
   if (page === 'contact') {
     document.querySelector('.contact h1').textContent = t.contactTitre;
     const ps = document.querySelectorAll('.contact p');
-    if(ps[0]) ps[0].textContent = t.contactDesc;
+    if (ps[0]) ps[0].textContent = t.contactDesc;
     const btnForm = document.querySelector('.btn-principal');
-    if(btnForm) btnForm.textContent = t.btnEnvoyer;
+    if (btnForm) btnForm.textContent = t.btnEnvoyer;
   }
 }
 
 // =====================
-// Section livres mini (page d’accueil)
+// Section livres mini
 // =====================
 const conteneurLivresMini = document.querySelector('.livres-mini');
 if (conteneurLivresMini) {
@@ -195,7 +189,7 @@ if (conteneurLivresMini) {
     const livreMini = document.createElement('div');
     livreMini.className = 'livre-mini effet-apparition-init';
     livreMini.innerHTML = `
-      <img src="assets/livre${i}.jpg" alt="Livre ${i}">
+      <img src="assets/Livres_3${i}.jpg" alt="Livre ${i}">
       <div class="titre-livre-mini"><strong>Livre ${i}</strong></div>
     `;
     conteneurLivresMini.appendChild(livreMini);
@@ -203,7 +197,7 @@ if (conteneurLivresMini) {
 }
 
 // =====================
-// Section pack de livres
+// Section pack de livres (20 livres FR/EN)
 // =====================
 const sectionLivresPack = document.getElementById('livresPack');
 if (sectionLivresPack) {
@@ -211,15 +205,15 @@ if (sectionLivresPack) {
     const carteLivre = document.createElement('div');
     carteLivre.className = 'carte-livre-pack effet-apparition-init';
     carteLivre.innerHTML = `
-      <img src="assets/livre${i}.jpg" alt="Livre ${i}">
-      <div class="titre-livre-pack"><strong>Livre ${i}</strong></div>
+      <img src="assets/Livres${i}.jpg" alt="Livres ${i}">
+      <div class="titre-livre-pack"><strong>Book ${i}</strong></div>
     `;
     sectionLivresPack.appendChild(carteLivre);
   }
 }
 
 // =====================
-// Animation d’apparition (fade-up)
+// Animation d’apparition
 // =====================
 const elementsApparition = document.querySelectorAll('.effet-apparition-init');
 const observateur = new IntersectionObserver(entries => {
@@ -250,6 +244,6 @@ liensMenu.forEach(lien => {
 });
 
 // =====================
-// Initialiser langue et texte
+// Initialiser texte
 // =====================
 mettreAJourTexte();
