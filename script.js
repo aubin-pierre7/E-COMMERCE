@@ -15,7 +15,7 @@ const textes = {
     fr: {
       banniereTitre: "Découvrez le pack ultime de 100 ebooks",
       banniereDesc: "Apprenez à mieux gérer votre vie et vos finances grâce à notre sélection complète d’ebooks numériques sur le développement personnel et l’éducation financière. Progressez à votre rythme et transformez vos habitudes.",
-      btnVoirPack: "Voir le pack complet",
+      btnVoirPack: "Voir un aperçu du pack",
       livresMiniTitre: "Exemples de livres inclus dans le pack",
       aproposTitre: "Pourquoi ce pack peut changer votre vie",
       aproposDesc: "Ce pack contient 100 ebooks soigneusement sélectionnés pour améliorer vos compétences, booster votre carrière et vous inspirer chaque jour.",
@@ -64,7 +64,7 @@ const textes = {
         { auteur: "Alice", texte: "Super pack, j'ai beaucoup appris !" },
         { auteur: "Bob", texte: "Livres variés et instructifs." },
         { auteur: "Chloé", texte: "Contenu de qualité, je recommande." },
-        { auteur: "David", texte: "Excellent investissement pour seulement 25 000 FCFA." },
+        { auteur: "David", texte: "Excellent investissement pour seulement 3000 FCFA." },
         { auteur: "Emma", texte: "Très satisfait, pack complet et utile." },
         { auteur: "Fabrice", texte: "Des livres pratiques pour mon business." },
         { auteur: "Gisèle", texte: "Idéal pour améliorer mes compétences en marketing." },
@@ -81,7 +81,7 @@ const textes = {
         { auteur: "Alice", texte: "Great pack, I learned a lot!" },
         { auteur: "Bob", texte: "Varied and informative books." },
         { auteur: "Chloé", texte: "High-quality content, I recommend it." },
-        { auteur: "David", texte: "Excellent investment for only 25,000 FCFA." },
+        { auteur: "David", texte: "Excellent investment for only 3,000 FCFA." },
         { auteur: "Emma", texte: "Very satisfied, complete and useful pack." },
         { auteur: "Fabrice", texte: "Practical books for my business." },
         { auteur: "Gisèle", texte: "Perfect to improve my marketing skills." },
@@ -93,8 +93,8 @@ const textes = {
   },
   contact: {
     fr: {
-      contactTitre: "Contactez-nous",
-      contactDesc: "Pour toute question ou demande d’information, envoyez-nous un email ou contactez-nous directement sur WhatsApp.",
+      contactTitre: "Contactez-moi",
+      contactDesc: "Pour toute question ou demande d’information, envoyez-moi un email ou contactez-moi directement sur WhatsApp.",
       btnEnvoyer: "Envoyer"
     },
     en: {
