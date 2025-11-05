@@ -45,7 +45,7 @@ const textes = {
       packApercuTitre: "Aperçu de 20 ebooks inclus",
       packDesc: "Avec ces 100 ebooks, explorez le développement personnel, la gestion financière, l’entrepreneuriat, l’investissement, la productivité et bien plus encore. Chaque livre vous offre des conseils pratiques, clairs et applicables immédiatement.",
       packDesc2: "Investir dans ce pack, c’est acquérir des connaissances précieuses, gagner du temps et développer des compétences clés pour réussir aussi bien sur le plan personnel que professionnel.",
-      btnAcheter: "Acheter le pack maintenant"
+      btnAcheter: "Acheter le pack maintenant - 500 FCFA"
     },
     en: {
       banniereTitre: "Discover our 100-ebook pack",
